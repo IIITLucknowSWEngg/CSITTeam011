@@ -1,8 +1,8 @@
 # CSITTeam011
 CSITTeam011
-<h1>Team Name</h1>
-<h1></h1>
-<h1>Team Memebers</h1>
+<h2>Team Name: Hotspot</h2>
+<h2>Team Idea: </h2>
+<h2>Team Memebers</h2>
 
 Sakshi Sahu IT LIT2023025 <a href="mailto:sakshisahu6999@gmail.com">sakshisahu6999@gmal.com</a> sakshisahu27
 
