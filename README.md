@@ -3,6 +3,9 @@ CSITTeam011
 
 <h2>Team Name: Hotspot</h2>
 <h2>Team Idea: Groww Clone</h2>
+
+**Github Issue:**<a href=" https://github.com/IIITLucknowSWEngg/Assignment/issues/6">Record of Approval</a>
+
 <h2>Team Members</h2>
 
 
@@ -15,5 +18,3 @@ Ananya Varshney IT LIT2023035 <a href="mailto:v.ananya1710@gmail.com">v.ananya17
 Anurag Yadav IT LIT2023021 <a href="mailto:anuragyadav2787@gmail.com">anuragyadav2787@gmail.com</a>  anurag2787
 
 Mayank Mishra IT LCS2023047 <a href="mailto:anuragyadav2787@gmail.com">mrmishramayank2005@gmail.com</a>  M-ayank2005
-
-Github Issue: <a href="https://github.com/IIITLucknowSWEngg/Assignment/issues/6">Record of Approval</a>
