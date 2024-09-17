@@ -4,7 +4,13 @@ CSITTeam011
 <h2>Team Name: Hotspot</h2>
 <h2>Team Idea: Groww Clone</h2>
 
-**Github Issue:**<a href=" https://github.com/IIITLucknowSWEngg/Assignment/issues/6">Record of Approval</a>
+---
+
+## Github Issue
+
+**[Record of Approval](https://github.com/IIITLucknowSWEngg/Assignment/issues/6)**
+
+---
 
 <h2>Team Members</h2>
 
