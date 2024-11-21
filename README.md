@@ -3,7 +3,7 @@
 ---
 
 ## **Team Name:** Hotspot  
-## **Team Idea:** Groww Clone  
+## **Team Idea:** Groww 
 
 ---
 
