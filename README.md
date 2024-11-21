@@ -3,7 +3,7 @@
 ---
 
 ## **Team Name:** Hotspot  
-## **Team Idea:** Groww 
+## **Team Idea:** Groww Trading App
 
 ---
 
