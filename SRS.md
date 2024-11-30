@@ -82,9 +82,11 @@ The Groww Clone is designed to provide users with a platform where they can:
   - The design should be responsive, ensuring proper functionality on a variety of screen sizes (desktop, tablet, mobile).
   - Both web-based and native mobile app versions (for iOS and Android) should be supported.
   - Mobile interactions (such as touch-based gestures) should be optimized for usability.
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c71bd9d9-104f-49b1-b50b-5e28f9d69d30" alt="image" width="300">
-</p>
+
+
+  
+  ![UML Diagram 1](https://www.plantuml.com/plantuml/dpng/JT2nIi0m4CRnFKznT2zYMrUfA6u5eTJzJ4yRckPAxcxnwILIQCO_-P5yP1J5h7P4vz0hPrY4idCcv548cfBmOhfHqk1H0wS6K61vVRpHJ9Zz1hEot-LXCZMCy6vfbSjsj_tWhDyS0yE42N_eeAINwcyrOTv9uGqLuJE8OGo_zUD3HVahH8BPpfEpNkTFplqlRzldChMEhew-Zg6ASiD8QIq_ymS0)
+
 
 
 ---
@@ -134,6 +136,10 @@ The Groww Clone is designed to provide users with a platform where they can:
   - Failover systems should be implemented to automatically switch to backup servers in the event of a failure.
   - Database backups should be conducted regularly to prevent data loss.
   - Automated health checks should monitor system components, and alert notifications should be sent out when issues arise.
+
+
+  ![UML Diagram 1](https://www.plantuml.com/plantuml/dpng/XP7BhjGm44Jt-GelGMWsi4CiBX8FNUaAeHdc0pfsmRJaX-bk3uJ7lqE20va5ojAjqzLLvJir4cif3ZIg2NbpFfAgUrVocvQzSSaKZ_ZSM92GJTttmRadBXOAfmg4Hu-Njy8tmMbIG-gZff3NNok4aJrMRY5EdYBdJpUp8oBJo95j-Zt_EGn_ZBo7V2oIA7lqqu7qCXQIy50eVE04zzmzFJoRBPGST65ADKxy3KTeBLcnLJpDLjccBeViPQhsYeowdoh5uEsbzr3TRfwr6-ohNa26-soDZQyut_yJk7B0MI5l6uVRwvxYhOgsMelOGalvOfUk4bXDU6o6EUXMerUrqKZ4sOZpUSwDlpPmHLwIFPGroVy_ziMFms5RznwwzhZ7zTRsmRMQVNJRm72775gAlm00)
+
 
 ---
 
