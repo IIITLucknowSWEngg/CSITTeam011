@@ -18,7 +18,15 @@ The Grow Trading App is a mobile application designed to facilitate stock tradin
 
 ## 2. System Architecture
 
-### 2.1 Architectural Overview
+### 2.1 High-Level Architecture
+
+The system consists of three main layers:
+
+1. **Frontend:** Provides a user-friendly interface for portfolio management and financial tracking.
+2. **Backend:** Handles business logic, processes user requests, and connects the frontend with the database.
+3. **Database:** Stores user data, transaction records, and market information.
+
+### 2.2 Architectural Overview
 ```mermaid
 stateDiagram-v2
     direction TB
@@ -34,7 +42,7 @@ stateDiagram-v2
     TransactionService --> DatabaseService
 ```
 
-### 2.2 Architectural Components
+### 2.3 Architectural Components
 1. **Mobile Application Layer**
    - Responsible for user interface and interaction
    - Implemented using React Native for cross-platform compatibility
