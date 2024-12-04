@@ -3,6 +3,7 @@ The System Context Diagram shows the Groww app in relation to its users and exte
 ## Diagram
 ![UML Diagram](https://www.plantuml.com/plantuml/dpng/NP1FJm8n4CNl_HJZdZ0HlN0YXa1GaGF9HkAPJ7P7QUYVJMSMs6zlssLLEBLvytklypfdmI2jDR3qJkWiwawxohGrmVDoyhISx2xwJ9KKsBjHrR9uI-41YWyIr0RMxaXH2qMKFfaOP4-m2lvq0cmQ40yM7NuJw0nQSiAFnVqGYBNLBbeNwKmPcqptCTona4tqDjz6ENVHD97hduZtP5h_PaDZKBvy-EVQlPvbj2ZNaTkAhmwmmN0WWIWbRndyKTV440ZDMBGbu8pLA7YJKcAN7bcXq0cxPEu5k2WfxnrTRM9S4qT3MJNy6undC9IO_fKjVOXB6-qBbJ_a5lDEYmyC_Ig56cQHIpKYyaPIxQ7lzuA2ryprtjDSkYBcOS25cfEhMslK3m00)
 ### UML Code
+```uml
 @startuml Context
 !include <C4/C4_Context>
 Person(customer, "Retail Investor", "Uses the Groww app to manage investments.")
@@ -16,6 +17,7 @@ admin -> GrowwApp: "Monitors System"
 GrowwApp -> API: "Fetch Stock Data"
 GrowwApp -> PaymentGateway: "Process Payments"
 @enduml
+```
 
 # Description 
 
