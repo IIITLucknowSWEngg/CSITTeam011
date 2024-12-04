@@ -34,6 +34,7 @@ The Container Diagram shows the major containers that compose the Groww app.
 ![UML Diagram](https://www.plantuml.com/plantuml/dpng/NP9FJy904CNl_HHZJoLHgWadOmXG_aWYfag8Hx9i9rBPxZQxKw4nVdTdeLNmzlBURzvs9Xqu4fQgGa5YD8bSexsz2wvoBLML8JmalJZfhN-pVf2YTKP7id9a2hJN4BuYPmhc-XFPis4dMDQEi5YFJAKpOUjePir-FonBXeyIM8ST-0hWxzLeQbcYpXXgPNXi5vBYgQg8q7fZdBjIYTe1RH5Myow_Trup4d9tQccKdtas6NO_N3mvb1QTyzQZq9b21vlAvPezKEOzb__QnfjeB4XiX4CUQQKVNzJBboSlbhmorsIS-U7lTld9WQ9XEZyHSWSBONT8m1PJPqmgwW8rpGJXNjICDmOq3jD1UsouwKDxcti8LmvT6BI63vkLEUDt815ACU3D9cytO83lchdupUQ4bmnFSZn5ablUoqzSn9VVosHgZUJxCTj4N3TWcF-fu0S0)
 
 ### UML Code
+```uml
 @startuml Container01
 !include <C4/C4_Container>
 Person(customer, "Retail Investor")
@@ -51,6 +52,7 @@ Backend -> Database: "Reads/Writes"
 Backend -> API: "Fetches Data"
 Backend -> PaymentGateway: "Processes Payments"
 @enduml
+```
 
 # Description
 
@@ -67,6 +69,7 @@ The Component Diagram provides a detailed view of the internal structure of the 
 ![UML Diagram](https://www.plantuml.com/plantuml/dpng/TP51Jpen4CNl_HJpxub_ed3XH0n15uq7CIYYHpDqHwXqsqsdQ_JRsyAoL2EtoSpytdlJJZYW3qrbe71LxIpP8FvfgqnJ4bmKmq4nVEqcOr4u6r1RyhqhL5kovHd8jfAnl7SbzTzvSFrPUs9EhLkqfI66LSEHOmRZrbhrvV-ZrdJLcsB05J95u50cUFQrUBYBgwABaFbUDc4JErfXqCx2Wlo7LdiCBQw90Nzkn2J0n1nhZW7-59qx7zwSqQxJosweks6rSwWYUqheoQDbLB-ZpRrJn1p5GhTmEiqC_PO2f2V9HMueg4sKuE3K5ieuJGAYvU1y38T7785y92nvyE9r89QYkw-LIyjxbuIqpL5h0OkTGPf8aHsKiRbUYoxhc8ZuE98Y_weSptC-ez49X2MJbs8IBsag8xu1)
 
 ### UML Code
+```uml
 @startuml Component
 !include <C4/C4_Component>
 Container(Backend, "Backend", "Node.js/Express", "Handles business logic.")
@@ -82,6 +85,7 @@ PortfolioService -> MarketDataService: "Fetch Stock Data"
 TransactionService -> PortfolioService: "Updates Portfolio"
 AuthenticationService -> Database: "Validate User"
 @enduml
+```
 
 # Description
 - Authentication Service: Manages user authentication and session handling.
@@ -97,6 +101,7 @@ The Deployment Diagram illustrates the physical deployment of the system, showin
 ![UML Diagram](https://www.plantuml.com/plantuml/dpng/ROz1Jm8n48Nl_HLZJqkYaWWdOmXGC6B0g9Lu96KxXqgtgypKI0p_tLaX0GqzJ5xxlkRDwnExDUSgmWZVOxsfCB4w2wcCsIFSc6xRT1S7gwSEUl5GUom6h_OSj4mmiSvUj-1R0VodnkPAA9amIPAOIjo1SaoTs8M4wsBeoXKcB-1UQP7Dzyitqgs_y6XPZ1oxfICKQBQnJzDVP7iYt7O4iHqOvdA5V2BOikDG3eYGIT3T5Mv3H6fMk7kPJTl6slQztMTibTqGOxKOVt5XOi34JRtaOKwubWK-GzDGxIouwC5nn3NeQUqymNoYZv1zQN47ZnDune-CnAHLNnvp5TKF)
 
 ### UML Code
+```uml
 @startuml Deployment
 !include <C4/C4_Deployment>
 Deployment_Node(AWS, "AWS Cloud") {
@@ -112,6 +117,7 @@ System_Ext(Client, "End User Device")
 Client -> StaticAssets: "Loads UI"
 Client -> Backend: "API Requests"
 @enduml
+```
 
 # Description
 - AWS EC2: Hosts the backend and database.
