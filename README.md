@@ -1,21 +1,16 @@
 # CSITTeam011 - Hotspot
 
----
-
 ## **Team Name:** Hotspot  
-## **Team Idea:** Groww Trading App
-
----
+## **Team Idea:** Groww Competitor
 
 ## **Project Description:**  
-The Groww Clone project aims to replicate the core features of the Groww platform, allowing users to simulate stock and mutual fund investments. It will offer portfolio management, market data visualization, and educational tools for users to track hypothetical investments.
-
----
+The Groww Clone project aims to replicate the core features of the Groww platform, enabling users to learn and practice portfolio management without real financial risks. 
+It allows users to track their portfolios, view market trends, and practice investing without using real money. The platform includes tools to visualize market data, manage 
+investments, and learn about financial strategies, making it easy for users to understand and improve their investment skills.
 
 ## **Github Issue**  
 **[Record of Approval](https://github.com/IIITLucknowSWEngg/Assignment/issues/6)**
 
----
 
 ## **Team Members**
 
@@ -27,5 +22,6 @@ The Groww Clone project aims to replicate the core features of the Groww platfor
 | Anurag Yadav    | IT     | LIT2023021   | [anuragyadav2787@gmail.com](mailto:anuragyadav2787@gmail.com) | anurag2787          |
 | Mayank Mishra   | CS     | LCS2023047   | [mrmishramayank2005@gmail.com](mailto:mrmishramayank2005@gmail.com) | M-ayank2005         |
 
----
+## **Acknowledgements**  
 
+We would like to express our gratitude to our professor Vinaya Sathyanarayana sir, our mentors, and the open-source community for their valuable guidance, support, and inspiration throughout this project.
