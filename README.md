@@ -4,7 +4,7 @@
 ## **Team Idea:** Groww Competitor
 
 ## **Project Description:**  
-The Groww Clone project aims to replicate the core features of the Groww platform, enabling users to learn and practice portfolio management without real financial risks. 
+The Groww Competitor project aims to replicate the core features of the Groww platform, enabling users to learn and practice portfolio management without real financial risks. 
 It allows users to track their portfolios, view market trends, and practice investing without using real money. The platform includes tools to visualize market data, manage 
 investments, and learn about financial strategies, making it easy for users to understand and improve their investment skills.
 
