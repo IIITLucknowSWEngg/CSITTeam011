@@ -85,28 +85,28 @@ flowchart TD
     AnalyzeTrends --> Dashboard
 ```
 ### 3. User Requirements Specification
-### 3.1 User Stories
+#### 3.1 User Stories
 
-#### 3.1.1 Beginner Investor
-- **As a beginner investor**, I want a simple and intuitive interface with easy navigation so that I can easily use the platform without feeling overwhelmed.
-- **As a beginner investor**, I want step-by-step guidance for tasks like adding stocks or mutual funds so that I can learn how to manage my investments effectively.
-- **As a beginner investor**, I want a basic overview of my portfolio performance with clear metrics like gains/losses and investment growth trends so that I can track my progress without confusion.
-- **As a beginner investor**, I want gamified features, such as earning badges for completing investment tutorials or achieving milestones, so that I stay motivated to continue using the platform.
+##### 3.1.1 Beginner Investor
+- I want a simple and intuitive interface with easy navigation so that I can easily use the platform without feeling overwhelmed.
+- I want step-by-step guidance for tasks like adding stocks or mutual funds so that I can learn how to manage my investments effectively.
+- I want a basic overview of my portfolio performance with clear metrics like gains/losses and investment growth trends so that I can track my progress without confusion.
+- I want gamified features, such as earning badges for completing investment tutorials or achieving milestones, so that I stay motivated to continue using the platform.
 
-#### 3.1.2 Intermediate Investor
-- **As an intermediate investor**, I want detailed insights into my portfolio performance, including advanced metrics like sector-wise allocation and risk exposure, so that I can understand and optimize my investments better.
-- **As an intermediate investor**, I want a comprehensive dashboard that highlights my strengths and areas needing improvement, with comparative benchmarks, so that I can focus on areas that need more attention.
-- **As an intermediate investor**, I want personalized recommendations and curated learning materials on topics like portfolio diversification and market trends, so that I can improve my skills and strategies.
+##### 3.1.2 Intermediate Investor
+- I want detailed insights into my portfolio performance, including advanced metrics like sector-wise allocation and risk exposure, so that I can understand and optimize my investments better.
+- I want a comprehensive dashboard that highlights my strengths and areas needing improvement, with comparative benchmarks, so that I can focus on areas that need more attention.
+- I want personalized recommendations and curated learning materials on topics like portfolio diversification and market trends, so that I can improve my skills and strategies.
 
-#### 3.1.3 Experienced Investor
-- **As an experienced investor**, I want advanced tools for portfolio management, including detailed stock analysis, custom alerts, and technical charts, so that I can make more informed decisions with my investments.
-- **As an experienced investor**, I want precise metrics like CAGR (Compound Annual Growth Rate), asset-wise returns, and risk-adjusted performance indicators, so that I can track and optimize my portfolio’s performance.
-- **As an experienced investor**, I want features for advanced strategies, such as tax optimization, goal-based investment tracking, and customizable investment plans, so that I can maximize the returns on my investments and achieve my financial goals.
+##### 3.1.3 Experienced Investor
+- I want advanced tools for portfolio management, including detailed stock analysis, custom alerts, and technical charts, so that I can make more informed decisions with my investments.
+- I want precise metrics like CAGR (Compound Annual Growth Rate), asset-wise returns, and risk-adjusted performance indicators, so that I can track and optimize my portfolio’s performance.
+- I want features for advanced strategies, such as tax optimization, goal-based investment tracking, and customizable investment plans, so that I can maximize the returns on my investments and achieve my financial goals.
 
-#### 3.1.4 Casual Investor
-- **As a casual investor**, I want quick, straightforward features to view my portfolio performance and invest in trending options, so that I can make fast decisions without needing to analyze too much.
-- **As a casual investor**, I want a simple summary of my total portfolio value, recent gains/losses, and top-performing investments, so that I can stay informed without overcomplicating things.
-- **As a casual investor**, I want interactive tools like investment calculators, quick recommendations, and gamified savings challenges, so that I can engage with the platform in a fun and light-hearted way.
+##### 3.1.4 Casual Investor
+- I want quick, straightforward features to view my portfolio performance and invest in trending options, so that I can make fast decisions without needing to analyze too much.
+- I want a simple summary of my total portfolio value, recent gains/losses, and top-performing investments, so that I can stay informed without overcomplicating things.
+- I want interactive tools like investment calculators, quick recommendations, and gamified savings challenges, so that I can engage with the platform in a fun and light-hearted way.
 
 
 #### 3.2 User Authentication and Account Management
@@ -226,7 +226,6 @@ flowchart TD
 
 #### 5.1 Performance
 - Response time < 2 seconds for most operations
-- Support concurrent users without performance degradation
 - Efficient data loading and caching mechanisms
 
 #### 5.2 Security
