@@ -86,23 +86,46 @@ flowchart TD
 ```
 ### 3. User Requirements Specification
 
-#### 3.1 User Authentication and Account Management
-##### 3.1.1 Registration Requirements
+#### 3.1 User Personas and Specific Requirements
+To ensure the platform meets the needs of other users, we have identified key user personas and their unique requirements:
+
+##### 3.1.1 Arjun Sharma (Beginner Investor)
+- **User Experience**: I need a simple and intuitive interface with easy navigation. Step-by-step guidance for tasks like adding stocks or mutual funds is essential for me.
+- **Progress Tracking**: I prefer a basic overview of my portfolio performance with clear metrics like gains/losses and investment growth trends.
+- **Engagement**: I enjoy gamified features, such as earning badges for completing investment tutorials or achieving milestones, which help motivate me to continue using the platform.
+
+##### 3.1.2 Madhuri Deshmukh (Intermediate Investor)
+- **User Experience**: I prefer detailed insights into my portfolio performance, including advanced metrics like sector-wise allocation and risk exposure.
+- **Progress Tracking**: I require a comprehensive dashboard that highlights my strengths and areas needing improvement, with comparative benchmarks.
+- **Engagement**: I enjoy personalized recommendations and curated learning materials on topics like portfolio diversification and market trends.
+
+##### 3.1.3 Ravi Patel (Experienced Investor)
+- **User Experience**: I need advanced tools for portfolio management, including detailed stock analysis, custom alerts, and technical charts.
+- **Progress Tracking**: I need precise metrics like CAGR (Compound Annual Growth Rate), asset-wise returns, and risk-adjusted performance indicators.
+- **Advanced Features**: I value features for advanced strategies, such as tax optimization, goal-based investment tracking, and customizable investment plans.
+
+##### 3.1.4 Ananya Reddy (Casual Investor)
+- **User Experience**: I prefer quick, straightforward features to view my portfolio performance and invest in trending options without requiring deep analysis.
+- **Progress Tracking**: A simple summary of my total portfolio value, recent gains/losses, and top-performing investments is enough for me.
+- **Engagement**: I enjoy interactive tools like investment calculators, quick recommendations, and gamified savings challenges.
+
+#### 3.2 User Authentication and Account Management
+##### 3.2.1 Registration Requirements
 - **Functional Requirements**:
   - Users shall be able to register using email address
   - Support for third-party authentication (Google, Facebook)
   - Implement secure password creation guidelines
   - Provide email verification process
 
-##### 3.1.2 Login Requirements
+##### 3.2.2 Login Requirements
 - **Functional Requirements**:
   - Secure login mechanism with encrypted credentials
   - Option for biometric authentication (fingerprint, face recognition)
   - Implement password reset functionality
   - Two-factor authentication (2FA) option
 
-#### 3.2 Portfolio Management
-##### 3.2.1 Investment Tracking
+#### 3.3 Portfolio Management
+##### 3.3.1 Investment Tracking
 - **Functional Requirements**:
   - Users shall add stocks and mutual funds to their portfolio
   - Ability to remove investments from portfolio
@@ -110,15 +133,15 @@ flowchart TD
   - Historical performance tracking
   - Detailed breakdown of investment allocation
 
-##### 3.2.2 Performance Analysis
+##### 3.3.2 Performance Analysis
 - **Functional Requirements**:
   - Comprehensive portfolio performance metrics
   - Gain/loss calculations
   - Comparative performance against market benchmarks
   - Detailed investment history and transaction log
 
-#### 3.3 Market Research and Discovery
-##### 3.3.1 Stock Search and Information
+#### 3.4 Market Research and Discovery
+##### 3.4.1 Stock Search and Information
 - **Functional Requirements**:
   - Advanced stock search functionality
   - Detailed stock information display
@@ -128,7 +151,7 @@ flowchart TD
     - Key financial ratios
   - Real-time price updates
 
-##### 3.3.2 Mutual Fund Research
+##### 3.4.2 Mutual Fund Research
 - **Functional Requirements**:
   - Comprehensive mutual fund database
   - Detailed fund performance metrics
@@ -136,37 +159,13 @@ flowchart TD
   - Historical performance graphs
   - Expense ratio and fund manager information
 
-#### 3.4 Market Analysis Tools
-##### 3.4.1 Visualization and Reporting
+#### 3.5 Market Analysis Tools
+##### 3.5.1 Visualization and Reporting
 - **Functional Requirements**:
   - Interactive market trend graphs
   - Customizable chart views
   - Technical indicator overlays
   - Sector and industry performance comparisons
-
-### 3.5 User Personas and Specific Requirements
-To ensure the platform meets my needs and the needs of other users, I have identified key user personas and their unique requirements:
-
-#### 3.5.1 Arjun Sharma (Beginner Investor)
-- **User Experience**: I need a simple and intuitive interface with easy navigation. Step-by-step guidance for tasks like adding stocks or mutual funds is essential for me.
-- **Progress Tracking**: I prefer a basic overview of my portfolio performance with clear metrics like gains/losses and investment growth trends.
-- **Engagement**: I enjoy gamified features, such as earning badges for completing investment tutorials or achieving milestones, which help motivate me to continue using the platform.
-
-#### 3.5.2 Madhuri Deshmukh (Intermediate Investor)
-- **User Experience**: I prefer detailed insights into my portfolio performance, including advanced metrics like sector-wise allocation and risk exposure.
-- **Progress Tracking**: I require a comprehensive dashboard that highlights my strengths and areas needing improvement, with comparative benchmarks.
-- **Engagement**: I enjoy personalized recommendations and curated learning materials on topics like portfolio diversification and market trends.
-
-#### 3.5.3 Ravi Patel (Experienced Investor)
-- **User Experience**: I need advanced tools for portfolio management, including detailed stock analysis, custom alerts, and technical charts.
-- **Progress Tracking**: I need precise metrics like CAGR (Compound Annual Growth Rate), asset-wise returns, and risk-adjusted performance indicators.
-- **Advanced Features**: I value features for advanced strategies, such as tax optimization, goal-based investment tracking, and customizable investment plans.
-
-#### 3.5.4 Ananya Reddy (Casual Investor)
-- **User Experience**: I prefer quick, straightforward features to view my portfolio performance and invest in trending options without requiring deep analysis.
-- **Progress Tracking**: A simple summary of my total portfolio value, recent gains/losses, and top-performing investments is enough for me.
-- **Engagement**: I enjoy interactive tools like investment calculators, quick recommendations, and gamified savings challenges.
-
 
 ## Use Case Diagram
 ```mermaid
