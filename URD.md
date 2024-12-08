@@ -144,6 +144,30 @@ flowchart TD
   - Technical indicator overlays
   - Sector and industry performance comparisons
 
+### 3.5 User Personas and Specific Requirements
+To ensure the platform meets my needs and the needs of other users, I have identified key user personas and their unique requirements:
+
+#### 3.5.1 Arjun Sharma (Beginner Investor)
+- **User Experience**: I need a simple and intuitive interface with easy navigation. Step-by-step guidance for tasks like adding stocks or mutual funds is essential for me.
+- **Progress Tracking**: I prefer a basic overview of my portfolio performance with clear metrics like gains/losses and investment growth trends.
+- **Engagement**: I enjoy gamified features, such as earning badges for completing investment tutorials or achieving milestones, which help motivate me to continue using the platform.
+
+#### 3.5.2 Madhuri Deshmukh (Intermediate Investor)
+- **User Experience**: I prefer detailed insights into my portfolio performance, including advanced metrics like sector-wise allocation and risk exposure.
+- **Progress Tracking**: I require a comprehensive dashboard that highlights my strengths and areas needing improvement, with comparative benchmarks.
+- **Engagement**: I enjoy personalized recommendations and curated learning materials on topics like portfolio diversification and market trends.
+
+#### 3.5.3 Ravi Patel (Experienced Investor)
+- **User Experience**: I need advanced tools for portfolio management, including detailed stock analysis, custom alerts, and technical charts.
+- **Progress Tracking**: I need precise metrics like CAGR (Compound Annual Growth Rate), asset-wise returns, and risk-adjusted performance indicators.
+- **Advanced Features**: I value features for advanced strategies, such as tax optimization, goal-based investment tracking, and customizable investment plans.
+
+#### 3.5.4 Ananya Reddy (Casual Investor)
+- **User Experience**: I prefer quick, straightforward features to view my portfolio performance and invest in trending options without requiring deep analysis.
+- **Progress Tracking**: A simple summary of my total portfolio value, recent gains/losses, and top-performing investments is enough for me.
+- **Engagement**: I enjoy interactive tools like investment calculators, quick recommendations, and gamified savings challenges.
+
+
 ## Use Case Diagram
 ```mermaid
 flowchart TD
