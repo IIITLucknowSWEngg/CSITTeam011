@@ -33,7 +33,7 @@ The Groww Competitor is designed to provide users with a platform where they can
   <img src="https://github.com/user-attachments/assets/0e41ed74-6ed0-4fae-b67f-915444f3b8c5" alt="for-blog_6Mar_-01" width="400">
 </p>
 
----
+-----
 
 ## 3. **Functional Requirements**
 
