@@ -91,9 +91,136 @@ The Groww Competitor is designed to provide users with a platform where they can
 
 ---
 
-## 4. **Non-Functional Requirements (NFRs)**
+## 4. **Use Cases**
 
-### 4.1 **Performance**
+### 4.1 **User Registration and Authentication**
+
+```mermaid
+flowchart TD
+    A[User Starts Registration] --> B{Provide Valid Details}
+    B --> |Valid| C[Create Account]
+    B --> |Invalid| D[Show Error Messages]
+    C --> E[Send Verification Email]
+    E --> F[Verify Email]
+    F --> G[User Can Login]
+    D --> B
+```
+
+#### Use Case: User Registration
+- **Primary Actor**: New User
+- **Preconditions**: User has a valid email address
+- **Main Flow**:
+  1. User navigates to registration page
+  2. User enters personal details (name, email, password)
+  3. System validates input
+  4. System creates user account
+  5. System sends verification email
+  6. User verifies email
+  7. User can now log in
+
+#### Use Case: User Login
+- **Primary Actor**: Registered User
+- **Preconditions**: User has a verified account
+- **Main Flow**:
+  1. User enters email and password
+  2. System validates credentials
+  3. System generates authentication token
+  4. User is redirected to dashboard
+
+### 4.2 **Portfolio Management**
+
+```mermaid
+flowchart TD
+    A[User Selects Portfolio] --> B[Add New Asset]
+    A --> C[Edit Existing Asset]
+    A --> D[Remove Asset]
+    B --> E{Validate Asset Details}
+    C --> F{Confirm Edit}
+    D --> G{Confirm Deletion}
+    E --> |Valid| H[Add to Portfolio]
+    F --> |Confirmed| I[Update Asset]
+    G --> |Confirmed| J[Remove from Portfolio]
+```
+
+#### Use Case: Add Investment
+- **Primary Actor**: Logged-in User
+- **Preconditions**: User is authenticated
+- **Main Flow**:
+  1. User searches for stock/mutual fund
+  2. User enters investment details
+  3. System validates details
+  4. Asset added to portfolio
+  5. Portfolio performance updated
+
+### 4.3 **Market Data Visualization**
+
+```mermaid
+flowchart TD
+    A[User Selects Stock/Fund] --> B[View Price Chart]
+    B --> C[Select Time Frame]
+    C --> D[Display Performance Metrics]
+    D --> E[Compare with Other Assets]
+```
+
+## 5. **Error Cases and Handling**
+
+### 5.1 **Authentication Errors**
+
+```mermaid
+flowchart TD
+    A[Login Attempt] --> B{Validate Credentials}
+    B --> |Invalid Password| C[Show Password Error]
+    B --> |Account Locked| D[Show Account Locked Message]
+    B --> |Unverified Email| E[Prompt Email Verification]
+    C --> F[Retry Login]
+    D --> G[Contact Support]
+    E --> H[Resend Verification]
+```
+
+### 5.2 **Portfolio Management Errors**
+
+```mermaid
+flowchart TD
+    A[Portfolio Action] --> B{Validate Input}
+    B --> |Invalid Quantity| C[Show Quantity Error]
+    B --> |Duplicate Asset| D[Prompt Asset Update]
+    B --> |Insufficient Data| E[Request Complete Information]
+```
+
+## 6. **Abuse Cases and Mitigation**
+
+### 6.1 **Potential Security Threats**
+
+```mermaid
+flowchart TD
+    A[Potential Abuse] --> B{Threat Type}
+    B --> |Brute Force Login| C[Implement Login Lockout]
+    B --> |Data Scraping| D[Rate Limit API Requests]
+    B --> |Fake Accounts| E[Enhanced Registration Verification]
+    C --> F[Temporary Account Suspension]
+    D --> G[CAPTCHA Implementation]
+    E --> H[Multi-Factor Authentication]
+```
+
+#### Abuse Case Mitigation Strategies
+1. **Brute Force Prevention**:
+   - Implement login attempt limits
+   - Temporary account lockout
+   - Progressive delay between login attempts
+
+2. **Data Scraping Protection**:
+   - Implement API rate limiting
+   - Use CAPTCHA for automated request detection
+   - Implement user-agent validation
+
+3. **Fake Account Prevention**:
+   - Email verification
+   - Phone number verification
+   - Machine learning-based account risk scoring
+
+## 7. **Non-Functional Requirements (NFRs)**
+
+### 7.1 **Performance**
 
 - **Description**: The application should provide a fast and smooth user experience.
 - **Requirements**:
@@ -101,7 +228,7 @@ The Groww Competitor is designed to provide users with a platform where they can
   - Server response time should be optimized using caching and efficient queries.
   - The system should maintain responsiveness even under heavy user load, such as during peak market hours.
 
-### 4.2 **Security**
+### 7.2 **Security**
 
 - **Description**: The system must ensure that all user data is securely stored and transmitted.
 - **Requirements**:
@@ -110,7 +237,7 @@ The Groww Competitor is designed to provide users with a platform where they can
   - Regular security audits and vulnerability testing should be conducted to ensure protection against data breaches.
   - Implement strong password policies and account lockout after multiple failed login attempts.
 
-### 4.3 **Usability**
+### 7.3 **Usability**
 
 - **Description**: The application must be designed to be intuitive and easy to use, minimizing the learning curve for users.
 - **Requirements**:
@@ -119,7 +246,7 @@ The Groww Competitor is designed to provide users with a platform where they can
   - Error messages and prompts should be informative, helping users recover from mistakes easily.
   - Conduct usability testing with a small group of users to identify potential areas of improvement.
 
-### 4.4 **Scalability**
+### 7.4 **Scalability**
 
 - **Description**: The system must be able to scale to accommodate a growing user base without degradation in performance.
 - **Requirements**:
@@ -128,7 +255,7 @@ The Groww Competitor is designed to provide users with a platform where they can
   - Use load balancers to distribute user traffic evenly across servers.
   - Optimize database queries and introduce caching mechanisms (e.g., Redis, Memcached) to reduce server load.
 
-### 4.5 **Reliability**
+### 7.5 **Reliability**
 
 - **Description**: The system must ensure high availability and consistent uptime for users.
 - **Requirements**:
