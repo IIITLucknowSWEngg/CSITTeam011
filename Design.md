@@ -1,12 +1,12 @@
-# Grow Trading App - Software Design Document
+# Groww Competitor - Software Design Document
 
 ## 1. Introduction
 
 ### 1.1 Purpose
-This document provides a comprehensive software design specification for the Grow Trading App, detailing the architectural design, system components, interfaces, and design considerations.
+This document provides a comprehensive software design specification for the Groww Competitor, detailing the architectural design, system components, interfaces, and design considerations.
 
 ### 1.2 Scope
-The Grow Trading App is a mobile application designed to facilitate stock trading, portfolio management, and investment tracking for users.
+The Groww Competitor is a mobile application designed to facilitate stock trading, portfolio management, and investment tracking for users.
 
 ### 1.3 Design Principles
 - Modular Architecture

@@ -1,5 +1,5 @@
 # Software Design Diagrams
-## Groww Investment Platform
+## Groww Competitor Investment Platform
 
 ## 1. Class Diagram
 ```mermaid

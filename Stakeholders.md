@@ -1,5 +1,5 @@
 # Stakeholder Management Strategy
-## Groww Investment Platform
+## Groww Competitor Investment Platform
 
 ### 1. Executive Summary
 This Stakeholder Management Strategy provides a comprehensive framework for identifying, analyzing, and engaging with key stakeholders of the Groww Investment Platform. By understanding and effectively managing stakeholder relationships, we aim to ensure project success, alignment of objectives, and sustainable growth.

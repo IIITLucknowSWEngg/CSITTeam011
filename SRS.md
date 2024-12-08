@@ -1,8 +1,8 @@
-# Software Requirements Specification (SRS) - Groww Clone
+# Software Requirements Specification (SRS) - Groww Competitor
 
 ## 1. **Introduction**
 
-This Software Requirements Specification (SRS) document details the requirements for the Groww Clone project. The project aims to replicate the core functionality of the popular investment platform, Groww, with the ability to track investments, manage portfolios, and visualize market data. It emphasizes user-friendly design, security, and performance. The system will not allow real trading but instead focus on simulating the experience for educational purposes.
+This Software Requirements Specification (SRS) document details the requirements for the Groww Competitor project. The project aims to replicate the core functionality of the popular investment platform, Groww, with the ability to track investments, manage portfolios, and visualize market data. It emphasizes user-friendly design, security, and performance. The system will not allow real trading but instead focus on simulating the experience for educational purposes.
 
 The primary audience for this document includes developers, project managers, and stakeholders who are involved in the development and deployment of the Groww Clone platform.
 
@@ -15,7 +15,7 @@ The primary audience for this document includes developers, project managers, an
 
 ## 2. **Scope**
 
-The Groww Clone is designed to provide users with a platform where they can:
+The Groww Competitor is designed to provide users with a platform where they can:
 
 - Track their stock and mutual fund investments.
 - Create and manage a personal portfolio.

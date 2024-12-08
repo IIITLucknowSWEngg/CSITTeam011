@@ -1,12 +1,12 @@
 # User Requirements Document (URD)
-## Groww Investment Platform
+## Groww Competitor Investment Platform
 
 ### 1. Document Purpose
-This User Requirements Document (URD) defines the comprehensive user requirements for the Groww Investment Platform, detailing the functional and non-functional expectations of the application.
+This User Requirements Document (URD) defines the comprehensive user requirements for the Groww Competitor Investment Platform, detailing the functional and non-functional expectations of the application.
 
 ### 2. Project Overview
 #### 2.1 Background
-The Groww Investment Platform is a digital solution designed to democratize investment management, providing users with intuitive tools to track, analyze, and manage their financial portfolios.
+The Groww Competitor Investment Platform is a digital solution designed to democratize investment management, providing users with intuitive tools to track, analyze, and manage their financial portfolios.
 ## Sequence Diagram: User Authentication and Portfolio Creation
 ```mermaid
 sequenceDiagram
@@ -240,4 +240,4 @@ flowchart TD
 - Subject to iterative refinement based on user feedback
 
 ## Conclusion
-This User Requirements Document provides a comprehensive blueprint for the Groww Investment Platform, ensuring a clear, structured approach to developing a user-centric investment management solution.
+This User Requirements Document provides a comprehensive blueprint for the Groww Competitor Investment Platform, ensuring a clear, structured approach to developing a user-centric investment management solution.

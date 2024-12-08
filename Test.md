@@ -1,5 +1,5 @@
 # Comprehensive Test Documentation
-## Groww Trading Platform
+## Groww Competitor Investment Platform
 Version 1.0 | December 2024
 
 ## Table of Contents
@@ -19,7 +19,7 @@ Version 1.0 | December 2024
 ## 1. Test Plan Overview
 
 ### 1.1 Purpose
-This document outlines the comprehensive testing strategy for the Groww Trading Platform, following IEEE 829-2008 standards and incorporating BDD methodology.
+This document outlines the comprehensive testing strategy for the Groww Competitor Trading Platform, following IEEE 829-2008 standards and incorporating BDD methodology.
 
 ### 1.2 Scope
 ```mermaid

@@ -1,8 +1,8 @@
-# Groww Investment Platform: Project Specification
+# Groww Competitor Investment Platform: Project Specification
 
 ## Executive Summary
 
-The Groww Investment Platform is a comprehensive digital investment solution designed to democratize investing by providing user-friendly, accessible financial tools for both novice and experienced investors. This project aims to develop a robust web and mobile application that simplifies investment tracking, portfolio management, and financial education.
+The Groww Competitor Investment Platform is a comprehensive digital investment solution designed to democratize investing by providing user-friendly, accessible financial tools for both novice and experienced investors. This project aims to develop a robust web and mobile application that simplifies investment tracking, portfolio management, and financial education.
 
 ## Project Overview
 
