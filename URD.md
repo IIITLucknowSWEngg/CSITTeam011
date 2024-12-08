@@ -99,7 +99,7 @@ flowchart TD
 - I want the platform to suggest investment opportunities or adjustments based on my portfolio performance, so that I can optimize my investments.
 
 
-#### 3.1.3 Experienced Investor
+##### 3.1.3 Experienced Investor
 - I want advanced tools for portfolio management, including detailed stock analysis, custom alerts, and technical charts, so that I can make more informed decisions about my investments.
 - I want precise metrics like CAGR (Compound Annual Growth Rate), asset-wise returns, and risk-adjusted performance indicators, so that I can effectively track and optimize my portfolio's performance.
 - I want features for managing advanced investment strategies, such as tax optimization and goal-based investment tracking, so that I can maximize my returns and meet my financial objectives.
