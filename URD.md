@@ -104,7 +104,7 @@ To ensure the platform meets the needs of other users, we have identified key us
 - **Progress Tracking**: I need precise metrics like CAGR (Compound Annual Growth Rate), asset-wise returns, and risk-adjusted performance indicators.
 - **Advanced Features**: I value features for advanced strategies, such as tax optimization, goal-based investment tracking, and customizable investment plans.
 
-##### 3.1.4 Ananya Reddy (Casual Investor)
+##### 3.1.4 Yash Chauhan (Casual Investor)
 - **User Experience**: I prefer quick, straightforward features to view my portfolio performance and invest in trending options without requiring deep analysis.
 - **Progress Tracking**: A simple summary of my total portfolio value, recent gains/losses, and top-performing investments is enough for me.
 - **Engagement**: I enjoy interactive tools like investment calculators, quick recommendations, and gamified savings challenges.
