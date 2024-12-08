@@ -14,7 +14,7 @@ Version 1.0 | December 2024
 9. [Risk Analysis](#9-risk-analysis)
 10. [Quality Metrics](#10-quality-metrics)
 11. [Reporting](#11-reporting)
-12. [Sign-off](#12-sign-off)
+
 
 ## 1. Test Plan Overview
 
