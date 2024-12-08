@@ -88,25 +88,27 @@ flowchart TD
 #### 3.1 User Stories
 
 ##### 3.1.1 Beginner Investor
-- I want a simple and intuitive interface with easy navigation so that I can easily use the platform without feeling overwhelmed.
-- I want step-by-step guidance for tasks like adding stocks or mutual funds so that I can learn how to manage my investments effectively.
-- I want a basic overview of my portfolio performance with clear metrics like gains/losses and investment growth trends so that I can track my progress without confusion.
-- I want gamified features, such as earning badges for completing investment tutorials or achieving milestones, so that I stay motivated to continue using the platform.
+- I want a simple and intuitive interface with easy navigation so that I can use the platform without feeling overwhelmed or confused.
+- I want the ability to easily add stocks or mutual funds to my portfolio so that I can manage my investments effectively.
+- I want a clear and basic overview of my portfolio’s performance, including metrics like gains/losses and investment growth trends, so that I can track my progress with ease.
+- I want notifications or alerts for important updates, such as changes in my portfolio value, so that I can stay informed and take necessary actions.
 
 ##### 3.1.2 Intermediate Investor
 - I want detailed insights into my portfolio performance, including advanced metrics like sector-wise allocation and risk exposure, so that I can understand and optimize my investments better.
 - I want a comprehensive dashboard that highlights my strengths and areas needing improvement, with comparative benchmarks, so that I can focus on areas that need more attention.
-- I want personalized recommendations and curated learning materials on topics like portfolio diversification and market trends, so that I can improve my skills and strategies.
+- I want the platform to suggest investment opportunities or adjustments based on my portfolio performance, so that I can optimize my investments.
 
-##### 3.1.3 Experienced Investor
-- I want advanced tools for portfolio management, including detailed stock analysis, custom alerts, and technical charts, so that I can make more informed decisions with my investments.
-- I want precise metrics like CAGR (Compound Annual Growth Rate), asset-wise returns, and risk-adjusted performance indicators, so that I can track and optimize my portfolio’s performance.
-- I want features for advanced strategies, such as tax optimization, goal-based investment tracking, and customizable investment plans, so that I can maximize the returns on my investments and achieve my financial goals.
+
+#### 3.1.3 Experienced Investor
+- I want advanced tools for portfolio management, including detailed stock analysis, custom alerts, and technical charts, so that I can make more informed decisions about my investments.
+- I want precise metrics like CAGR (Compound Annual Growth Rate), asset-wise returns, and risk-adjusted performance indicators, so that I can effectively track and optimize my portfolio's performance.
+- I want features for managing advanced investment strategies, such as tax optimization and goal-based investment tracking, so that I can maximize my returns and meet my financial objectives.
+
 
 ##### 3.1.4 Casual Investor
 - I want quick, straightforward features to view my portfolio performance and invest in trending options, so that I can make fast decisions without needing to analyze too much.
 - I want a simple summary of my total portfolio value, recent gains/losses, and top-performing investments, so that I can stay informed without overcomplicating things.
-- I want interactive tools like investment calculators, quick recommendations, and gamified savings challenges, so that I can engage with the platform in a fun and light-hearted way.
+- I want interactive tools like investment calculators so that I can engage with the platform in a fun and light-hearted way.
 
 
 #### 3.2 User Authentication and Account Management
