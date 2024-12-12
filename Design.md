@@ -21,12 +21,37 @@ The Groww Competitor platform enables:
 
 ## **2. System Overview**
 
-The system leverages **microservices architecture** to deliver scalable and modular financial management:
+**Groww Competitor** is a comprehensive platform enabling users to invest in stocks, mutual funds, and other financial instruments. It provides real-time market updates, portfolio management, educational content, and secure transactions.
 
-- **Frontend**: User interface (Web & Mobile)  
-- **Backend**: REST APIs and business logic  
-- **Database**: Data storage for users, portfolios, and transactions  
-- **Integrations**: External APIs for stock data and payment processing  
+### 2.1 Key Components
+
+#### **Frontend**
+- **Technology**: React.js (Web), Flutter (Mobile App)
+- **Features**:
+  - User onboarding and KYC verification.
+  - Real-time stock and mutual fund tracking.
+  - Portfolio management and analytics.
+  - Investment transactions.
+  - Educational resources and blogs.
+
+#### **Backend (Microservices)**
+- **Technology**: Node.js with Express.js, Java Spring Boot for critical services.
+- **API Communication**:
+  - RESTful APIs for transactional data.
+  - WebSocket for real-time updates.
+
+#### **Database**
+- **Primary**: PostgreSQL (Relational data: users, KYC, portfolios, transactions).
+- **Secondary**: MongoDB (Unstructured data like blogs and logs).
+- **Caching**: Redis for temporary storage of real-time stock prices.
+
+#### **Infrastructure**
+- **Cloud Provider**: AWS Cloud with Docker-based microservices.
+
+#### **Security**
+- Data encryption: AES-256.
+- OAuth 2.0 for user authentication.
+- Payment security: PCI-DSS compliance.
 
 ---
 
@@ -35,22 +60,25 @@ The system leverages **microservices architecture** to deliver scalable and modu
 ### **3.1 High-Level Architecture**  
 ```mermaid
 flowchart TD
-    UI["Frontend: React.js / React Native"] --> API["Backend: REST APIs"]
+    UI["Frontend: React.js / Flutter"] --> API["Backend: REST APIs"]
     API --> AuthService["Authentication Service"]
     API --> StockService["Stock Data Service"]
     API --> PortfolioService["Portfolio Management"]
     API --> TransactionService["Transaction Processing"]
 
-    AuthService --> DB["MongoDB"]
+    AuthService --> PostgreSQL["PostgreSQL"]
+    PortfolioService --> PostgreSQL
+    TransactionService --> PostgreSQL
     StockService --> MarketAPI["Market Data API"]
-    PortfolioService --> DB
+    API --> BlogService["Blog Management Service"]
+    BlogService --> MongoDB["MongoDB"]
     TransactionService --> PaymentGateway["Payment Gateway"]
 ```
 
 ### **3.2 Components**
 
 #### **Frontend**  
-- **Tech Stack**: React.js (Web), React Native (Mobile)  
+- **Tech Stack**: React.js (Web), Flutter (Mobile)  
 - **Features**:  
   - Authentication (Login, Registration)  
   - Portfolio Dashboard  
@@ -61,18 +89,22 @@ flowchart TD
 2. **Stock Data Service**: Fetch market data via APIs  
 3. **Portfolio Service**: Manage investments and returns  
 4. **Transaction Service**: Secure buy/sell processing  
-5. **Analytics Service**: Generate financial insights  
+5. **Blog Management Service**: Manage blogs and logs (stored in MongoDB).  
+6. **Analytics Service**: Generate financial insights  
 
 #### **Database**  
-- **MongoDB** for NoSQL data storage  
-- **Collections**:  
-  - `Users`: User profiles  
-  - `Portfolios`: Investment records  
-  - `Transactions`: Buy/sell history  
+- **PostgreSQL** (Primary): Stores relational data.  
+  - `Users`: User profiles, authentication, and KYC data.  
+  - `Portfolios`: Investment records and returns.  
+  - `Transactions`: Buy/sell history and payment logs.  
+- **MongoDB** (Secondary): Stores unstructured data like blogs and logs.  
+- **Redis**: Caches real-time stock prices to reduce latency.  
 
 #### **External Integrations**  
 - **Market Data API**: Real-time stock prices  
 - **Payment Gateway**: Secure payment processing  
+
+---
 
 ## **4. Entity Relationship Diagram (ERD)**
 
@@ -81,6 +113,7 @@ erDiagram
     USERS ||--o| PORTFOLIO : owns
     USERS ||--o| TRANSACTIONS : performs
     PORTFOLIO ||--o| MARKETDATA : references
+    USERS ||--o| BLOGS : writes
 
     USERS {
       string userId
@@ -110,6 +143,14 @@ erDiagram
       string stockSymbol
       float currentPrice
       float dailyChange
+    }
+
+    BLOGS {
+      string blogId
+      string userId
+      string title
+      string content
+      date createdAt
     }
 ```
 
@@ -144,6 +185,13 @@ erDiagram
 | `/sell`            | POST   | Execute sell order       |
 | `/transactions`    | GET    | Get transaction history  |
 
+### **5.5 Blog Management Service**  
+| Endpoint           | Method | Description              |
+|--------------------|--------|--------------------------|
+| `/blogs`           | GET    | Fetch all blogs          |
+| `/blogs/:id`       | GET    | Fetch blog by ID         |
+| `/blogs`           | POST   | Add new blog             |
+
 ---
 
 ## **6. Deployment Strategy**
@@ -168,5 +216,5 @@ The platform will deploy on **AWS**:
 The Groww platform is designed for scalability, security, and user-centric performance. Leveraging microservices, cloud infrastructure, and modern tech stacks, it aims to deliver an efficient investment management solution.
 
 ## **8. Engineering Blog References**  
-- [Invest with Ease: Revamping Groww's Mutual Fund SIP Flow](https://medium.com/@mestriabhishek/invest-with-ease-revamping-growws-mutual-fund-sip-flow-efb3acd3bbe)
+- [Invest with Ease: Revamping Groww's Mutual Fund SIP Flow](https://medium.com/@mestriabhishek/invest-with-ease-revamping-growws-mutual-fund-sip-flow-efb3acd3bbe)  
 - [Groww: Changing How Indians Invest](https://medium.com/@parasjain1805/groww-changing-how-indians-invest-f6e1865b5246)
