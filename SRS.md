@@ -41,7 +41,7 @@ The Groww Competitor is designed to provide users with a platform where they can
 
 - **Description**: Users must be able to create accounts, log in, and log out securely.
 - **Features**:
-  - Registration requires users to provide details like name, email, and password.
+  - Registration requires users to provide details i.e name, email, and password.
   - Login is protected with encryption (e.g., bcrypt) to ensure data security.
   - Password recovery and reset functionality must be available.
   - Multi-factor authentication (MFA) should be implemented for additional security.
