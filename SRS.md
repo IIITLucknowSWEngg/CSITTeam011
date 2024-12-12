@@ -224,7 +224,7 @@ flowchart TD
 
 - **Description**: The application should provide a fast and smooth user experience.
 - **Requirements**:
-  - The application should load the dashboard and core functionality within 2-3 seconds under typical conditions.
+  - The application should load the dashboard and core functionality within 2-3 seconds under worst conditions.
   - Server response time should be optimized using caching and efficient queries.
   - The system should maintain responsiveness even under heavy user load, such as during peak market hours.
 
