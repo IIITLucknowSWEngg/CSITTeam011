@@ -1,197 +1,220 @@
-# Groww Competitor - Software Design Document
+# **Groww Competitor Investment Platform - Software Design Document (SDD)**
 
-## 1. Introduction
+## **1. Introduction**
 
-### 1.1 Purpose
-This document provides a comprehensive software design specification for the Groww Competitor, detailing the architectural design, system components, interfaces, and design considerations.
+### 1.1 **Purpose**
+This document describes the design architecture for the Groww Competitor platform, an investment management system for stocks, mutual funds, and portfolios. It defines the system components, data flow, and deployment strategies.
 
-### 1.2 Scope
-The Groww Competitor is a mobile application designed to facilitate stock trading, portfolio management, and investment tracking for users.
+### 1.2 **Scope**
+The Groww Competitor platform enables:
+- Real-time stock and fund tracking
+- Portfolio management
+- Secure financial transactions
+- Analytical insights for investments
 
-### 1.3 Design Principles
-- Modular Architecture
-- Separation of Concerns
-- Scalability
-- Security
-- Performance Optimization
-- User-Centric Design
+### 1.3 **Goals & Principles**
+- **Scalability**: Handle large datasets and users efficiently  
+- **Performance**: Real-time stock updates with minimal latency  
+- **Security**: End-to-end encryption for transactions  
+- **Modularity**: Independent and maintainable microservices  
+- **User Focus**: Seamless and intuitive interface  
 
-## 2. System Architecture
+## **2. System Overview**
 
-### 2.1 High-Level Architecture
+**Groww Competitor** is a comprehensive platform enabling users to invest in stocks, mutual funds, and other financial instruments. It provides real-time market updates, portfolio management, educational content, and secure transactions.
 
-The system consists of three main layers:
+### 2.1 Key Components
 
-1. **Frontend:** Provides a user-friendly interface for portfolio management and financial tracking.
-2. **Backend:** Handles business logic, processes user requests, and connects the frontend with the database.
-3. **Database:** Stores user data, transaction records, and market information.
+#### **Frontend**
+- **Technology**: React.js (Web), Flutter (Mobile App)
+- **Features**:
+  - User onboarding and KYC verification.
+  - Real-time stock and mutual fund tracking.
+  - Portfolio management and analytics.
+  - Investment transactions.
+  - Educational resources and blogs.
 
-### 2.2 Architectural Overview
+#### **Backend (Microservices)**
+- **Technology**: Node.js with Express.js, Java Spring Boot for critical services.
+- **API Communication**:
+  - RESTful APIs for transactional data.
+  - WebSocket for real-time updates.
+
+#### **Database**
+- **Primary**: PostgreSQL (Relational data: users, KYC, portfolios, transactions).
+- **Secondary**: MongoDB (Unstructured data like blogs and logs).
+- **Caching**: Redis for temporary storage of real-time stock prices.
+
+#### **Infrastructure**
+- **Cloud Provider**: AWS Cloud with Docker-based microservices.
+
+#### **Security**
+- Data encryption: AES-256.
+- OAuth 2.0 for user authentication.
+- Payment security: PCI-DSS compliance.
+
+---
+
+## **3. System Architecture**
+
+### **3.1 High-Level Architecture**  
 ```mermaid
-stateDiagram-v2
-    direction TB
-    [*] --> MobileApp
-    MobileApp --> AuthenticationService
-    MobileApp --> StockDataService
-    MobileApp --> PortfolioService
-    MobileApp --> TransactionService
-    
-    AuthenticationService --> DatabaseService
-    StockDataService --> ExternalAPIService
-    PortfolioService --> DatabaseService
-    TransactionService --> DatabaseService
+flowchart TD
+    UI["Frontend: React.js / Flutter"] --> API["Backend: REST APIs"]
+    API --> AuthService["Authentication Service"]
+    API --> StockService["Stock Data Service"]
+    API --> PortfolioService["Portfolio Management"]
+    API --> TransactionService["Transaction Processing"]
+
+    AuthService --> PostgreSQL["PostgreSQL"]
+    PortfolioService --> PostgreSQL
+    TransactionService --> PostgreSQL
+    StockService --> MarketAPI["Market Data API"]
+    API --> BlogService["Blog Management Service"]
+    BlogService --> MongoDB["MongoDB"]
+    TransactionService --> PaymentGateway["Payment Gateway"]
 ```
 
-### 2.3 Architectural Components
-1. **Mobile Application Layer**
-   - Responsible for user interface and interaction
-   - Implemented using React Native for cross-platform compatibility
+### **3.2 Components**
 
-2. **Service Layer**
-   - Authentication Service
-   - Stock Data Service
-   - Portfolio Management Service
-   - Transaction Service
+#### **Frontend**  
+- **Tech Stack**: React.js (Web), Flutter (Mobile)  
+- **Features**:  
+  - Authentication (Login, Registration)  
+  - Portfolio Dashboard  
+  - Real-time stock data visualization  
 
-3. **Data Layer**
-   - Firebase Realtime Database
-   - Secure cloud storage for user data
+#### **Backend (Microservices)**  
+1. **Authentication Service**: User registration and login  
+2. **Stock Data Service**: Fetch market data via APIs  
+3. **Portfolio Service**: Manage investments and returns  
+4. **Transaction Service**: Secure buy/sell processing  
+5. **Blog Management Service**: Manage blogs and logs (stored in MongoDB).  
+6. **Analytics Service**: Generate financial insights  
 
-4. **External Integrations**
-   - Stock market data APIs
-   - Payment gateways
+#### **Database**  
+- **PostgreSQL** (Primary): Stores relational data.  
+  - `Users`: User profiles, authentication, and KYC data.  
+  - `Portfolios`: Investment records and returns.  
+  - `Transactions`: Buy/sell history and payment logs.  
+- **MongoDB** (Secondary): Stores unstructured data like blogs and logs.  
+- **Redis**: Caches real-time stock prices to reduce latency.  
 
-## 3. Detailed Component Design
+#### **External Integrations**  
+- **Market Data API**: Real-time stock prices  
+- **Payment Gateway**: Secure payment processing  
 
-### 3.1 Authentication Component
+---
+
+## **4. Entity Relationship Diagram (ERD)**
+
 ```mermaid
-sequenceDiagram
-    participant User
-    participant MobileApp
-    participant AuthService
-    participant Database
+erDiagram
+    USERS ||--o| PORTFOLIO : owns
+    USERS ||--o| TRANSACTIONS : performs
+    PORTFOLIO ||--o| MARKETDATA : references
+    USERS ||--o| BLOGS : writes
 
-    User->>MobileApp: Open App
-    MobileApp->>AuthService: Request Login
-    AuthService->>Database: Validate Credentials
-    Database-->>AuthService: Validation Result
-    AuthService-->>MobileApp: Authentication Token
-    MobileApp-->>User: Access Granted
-```
-
-#### Key Features
-- Multi-factor authentication
-- OAuth integration
-- Secure token-based authentication
-- Password reset functionality
-
-### 3.2 Stock Data Service
-```mermaid
-classDiagram
-    class StockDataService {
-        +fetchRealTimeStockPrices()
-        +getHistoricalStockData()
-        +calculateStockAnalytics()
-        -cacheStockData()
+    USERS {
+      string userId
+      string username
+      string email
+      string password
+      float walletBalance
     }
-    
-    class StockModel {
-        +symbol: String
-        +currentPrice: Float
-        +dailyChange: Float
-        +marketCap: Float
-    }
-```
 
-#### Responsibilities
-- Real-time stock price retrieval
-- Historical data analysis
-- Market trend prediction
-- Performance tracking
-
-### 3.3 Portfolio Management
-```mermaid
-classDiagram
-    class Portfolio {
-        +userId: String
-        +stocks: List<StockHolding>
-        +totalInvestment: Float
-        +currentValue: Float
-        
-        +addStock(stock: StockHolding)
-        +removeStock(symbol: String)
-        +calculateReturns()
+    PORTFOLIO {
+      string portfolioId
+      string userId
+      list holdings
+      float totalInvestment
     }
-    
-    class StockHolding {
-        +symbol: String
-        +quantity: Integer
-        +purchasePrice: Float
-        +currentPrice: Float
+
+    TRANSACTIONS {
+      string transactionId
+      string userId
+      string stockSymbol
+      float amount
+      string type
+      date timestamp
+    }
+
+    MARKETDATA {
+      string stockSymbol
+      float currentPrice
+      float dailyChange
+    }
+
+    BLOGS {
+      string blogId
+      string userId
+      string title
+      string content
+      date createdAt
     }
 ```
 
-## 4. User Interface Design Principles
+---
 
-### 4.1 Design Guidelines
-- Minimalist and intuitive interface
-- Consistent color scheme and typography
-- Responsive design
-- Accessibility considerations
+## **5. Microservices API Endpoints**
 
-### 4.2 Key Screens
-- Login/Registration
-- Dashboard
-- Stock Trading Interface
-- Portfolio Overview
-- Transaction History
-- Profile Management
+### **5.1 Authentication Service**  
+| Endpoint           | Method | Description            |
+|--------------------|--------|------------------------|
+| `/register`        | POST   | Register new user      |
+| `/login`           | POST   | Authenticate user      |
+| `/logout`          | POST   | Terminate session      |
 
-## 5. Security Considerations
+### **5.2 Stock Data Service**  
+| Endpoint           | Method | Description            |
+|--------------------|--------|------------------------|
+| `/stocks`          | GET    | Fetch real-time prices |
+| `/history`         | GET    | Retrieve price history |
 
-### 5.1 Security Layers
-- End-to-end encryption
-- Secure authentication mechanisms
-- Regular security audits
-- Data anonymization
-- Compliance with financial regulations
+### **5.3 Portfolio Service**  
+| Endpoint           | Method | Description                 |
+|--------------------|--------|-----------------------------|
+| `/portfolio`       | GET    | Get user portfolio          |
+| `/addHolding`      | POST   | Add stocks to portfolio     |
+| `/removeHolding`   | POST   | Sell or remove holdings     |
 
-### 5.2 Data Protection
-- Encrypted storage of sensitive information
-- Secure API communication
-- Regular backup and recovery mechanisms
+### **5.4 Transaction Service**  
+| Endpoint           | Method | Description              |
+|--------------------|--------|--------------------------|
+| `/buy`             | POST   | Execute buy order        |
+| `/sell`            | POST   | Execute sell order       |
+| `/transactions`    | GET    | Get transaction history  |
 
-## 6. Performance Optimization
+### **5.5 Blog Management Service**  
+| Endpoint           | Method | Description              |
+|--------------------|--------|--------------------------|
+| `/blogs`           | GET    | Fetch all blogs          |
+| `/blogs/:id`       | GET    | Fetch blog by ID         |
+| `/blogs`           | POST   | Add new blog             |
 
-### 6.1 Optimization Strategies
-- Caching mechanisms
-- Efficient database queries
-- Lazy loading of resources
-- Minimized network calls
-- Background data synchronization
+---
 
-## 7. Error Handling and Logging
+## **6. Deployment Strategy**
 
-### 7.1 Error Management
-- Comprehensive error tracking
-- User-friendly error messages
-- Detailed logging for debugging
-- Automatic error reporting
+### **6.1 Infrastructure**  
+The platform will deploy on **AWS**:  
+- **EC2**: Backend services  
+- **S3**: Static frontend hosting  
+- **RDS**: Database hosting  
+- **CloudFront**: Content delivery  
 
-## 8. Deployment Strategy
+### **6.2 CI/CD Pipeline**  
+| Tool              | Purpose                      |
+|-------------------|------------------------------|
+| **GitHub**        | Source code version control  |
+| **Jenkins / GitHub Actions** | CI/CD automation          |
+| **Docker**        | Containerized microservices  |
 
-### 8.1 Deployment Platforms
-- iOS App Store
-- Google Play Store
-- Web Application (Optional)
+---
 
-### 8.2 Continuous Integration/Continuous Deployment (CI/CD)
-- Automated testing
-- Staged rollout
-- Feature flags
-- Version management
+## **7. Conclusion**  
+The Groww platform is designed for scalability, security, and user-centric performance. Leveraging microservices, cloud infrastructure, and modern tech stacks, it aims to deliver an efficient investment management solution.
 
-## Revision History
-- Version 1.0: Initial Design Document
-- Date: 1 December 2024
-- Author: Groww Team
+## **8. Engineering Blog References**  
+- [Invest with Ease: Revamping Groww's Mutual Fund SIP Flow](https://medium.com/@mestriabhishek/invest-with-ease-revamping-growws-mutual-fund-sip-flow-efb3acd3bbe)  
+- [Groww: Changing How Indians Invest](https://medium.com/@parasjain1805/groww-changing-how-indians-invest-f6e1865b5246)
